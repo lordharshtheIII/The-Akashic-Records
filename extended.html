@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Akashic Records</title>
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+<style>
+
+    /* Resetting default margin and padding */
+    body, h1, h2, h3, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    /* Setting light peach as background color */
+    body {
+        background-image: linear-gradient(246deg, rgba(234, 234, 234, 0.04) 0%, rgba(234, 234, 234, 0.04) 33.3%,rgba(69, 69, 69, 0.04) 33.3%, rgba(69, 69, 69, 0.04) 66.6%,rgba(189, 189, 189, 0.04) 66.6%, rgba(189, 189, 189, 0.04) 99.89999999999999%),linear-gradient(81deg, rgba(126, 126, 126, 0.05) 0%, rgba(126, 126, 126, 0.05) 33.3%,rgba(237, 237, 237, 0.05) 33.3%, rgba(237, 237, 237, 0.05) 66.6%,rgba(74, 74, 74, 0.05) 66.6%, rgba(74, 74, 74, 0.05) 99.89999999999999%),linear-gradient(14deg, rgba(86,78,78, 0.08) 0%, rgba(86,78,78, 0.08) 33.3%,rgba(156, 156, 156, 0.08) 33.3%, rgba(156, 156, 156, 0.08) 66.6%,rgba(199, 199, 199, 0.08) 66.6%, rgba(199, 199, 199, 0.08) 99.89999999999999%),linear-gradient(323deg, rgba(82, 82, 82, 0.06) 0%, rgba(82, 82, 82, 0.06) 33.3%,rgba(179, 179, 179, 0.06) 33.3%, rgba(179, 179, 179, 0.06) 66.6%,rgba(212, 212, 212, 0.06) 66.6%, rgba(212, 212, 212, 0.06) 99.89999999999999%),linear-gradient(32deg, rgba(70, 70, 70, 0.02) 0%, rgba(70, 70, 70, 0.02) 33.3%,rgba(166, 166, 166, 0.02) 33.3%, rgba(166, 166, 166, 0.02) 66.6%,rgba(53, 53, 53, 0.02) 66.6%, rgba(53, 53, 53, 0.02) 99.89999999999999%),linear-gradient(38deg, rgba(129, 129, 129, 0.09) 0%, rgba(129, 129, 129, 0.09) 33.3%,rgba(38, 38, 38, 0.09) 33.3%, rgba(38, 38, 38, 0.09) 66.6%,rgba(153, 153, 153, 0.09) 66.6%, rgba(153, 153, 153, 0.09) 99.89999999999999%),linear-gradient(63deg, rgba(51, 51, 51, 0.02) 0%, rgba(51, 51, 51, 0.02) 33.3%,rgba(12, 12, 12, 0.02) 33.3%, rgba(12, 12, 12, 0.02) 66.6%,rgba(158, 158, 158, 0.02) 66.6%, rgba(158, 158, 158, 0.02) 99.89999999999999%),linear-gradient(227deg, rgba(63, 63, 63, 0.03) 0%, rgba(63, 63, 63, 0.03) 33.3%,rgba(9, 9, 9, 0.03) 33.3%, rgba(9, 9, 9, 0.03) 66.6%,rgba(85, 85, 85, 0.03) 66.6%, rgba(85, 85, 85, 0.03) 99.89999999999999%),linear-gradient(103deg, rgba(247, 247, 247, 0.07) 0%, rgba(247, 247, 247, 0.07) 33.3%,rgba(93, 93, 93, 0.07) 33.3%, rgba(93, 93, 93, 0.07) 66.6%,rgba(208, 208, 208, 0.07) 66.6%, rgba(208, 208, 208, 0.07) 99%),linear-gradient(0deg, rgb(255,242,177),rgb(252,148,55));
+        font-family: Arial, sans-serif;
+    }
+    /* Styling project name */
+    .project-name {
+        color: #343a40; /* Dark blue color */
+        font-size: 67px; /* Larger font size */
+        margin: 10px 20px 0; /* Adding margin */
+        text-align: center; /* Center aligning */
+    }
+    /* Styling navigation bar */
+    nav {
+        padding: 25px 35xpx;
+        text-align: center; /* Center aligning */
+    }
+    nav a {
+        color: #343a40; /* Dark blue color */
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px; /* Adding curve */
+    }
+    nav a:hover {
+        background-color: #343a40; /* Dark blue color */
+        color: white; /* White color */
+    }
+    /* Styling form container */
+    .form-container {
+        margin: 100px auto; /* Center aligning */
+        width: 50%; /* Setting width */
+        background-color: rgb(255, 235, 209);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    /* Styling form inputs */
+    input[type="text"], input[type="number"] {
+        width: calc(100% - 22px); /* Adjusting width */
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    /* Styling form submit button */
+    input[type="submit"] {
+        background-color: #343a40;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #1e2124;
+    }
+    /* Styling content container */
+    .content-container {
+        background-color: white;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow-y: auto; /* Adding scroll bar */
+        clear: both; /* Clear floats */
+        text-align: center; /* Center aligning */
+    }
+    /* Styling content */
+    .content {
+        color: #343a40;
+        margin-bottom: 20px;
+    }
+    /* Styling separator line */
+    .separator {
+        border-top: 2px solid #343a40; /* Dark blue color */
+        margin: 20px auto; /* Center aligning */
+        width: 100%; /* Setting width */
+    }
+    .separatorr {
+        border-top: 2px solid #343a40; /* Dark blue color */
+        margin: 10px auto ; /* Center aligning */
+        width: 70%; /* Setting width */
+        margin-bottom: 25px;
+    }
+    /* Styling footer */
+    footer {
+        background-color: #343a40;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        width: 100%;
+        clear: both; /* Clear floats */
+    }
+</style>
+</head>
+
+<body>
+    
+    <!-- Project name -->
+    <h1 class="project-name">The Akashic Records</h1>
+    <div class="separatorr"></div>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="Akashic.html">Home</a>
+        <a href="#">Contact</a>
+        <a href="#">Report Issue</a>
+        <a href="extended.html">Fill your details</a>
+        <a href="#">Try AI</a>
+    </nav>
+
+    <style>
+        /* Resetting default margin and padding */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        /* Setting light peach as background color */
+        body {
+            background-color: #ffe0b2;
+            font-family: Arial, sans-serif;
+        }
+        /* Styling form container */
+        .form-container {
+            margin: 50px auto; /* Center aligning */
+            width: 50%; /* Setting width */
+            background-color: rgb(243, 214, 156);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Styling form inputs */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 22px); /* Adjusting width */
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #e4d2d2;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        /* Styling submit button */
+        input[type="submit"] {
+            background-color: #343a40;
+            color: rgb(255, 229, 229);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #1e2124;
+        }
+    </style>
+    </head>
+    <body>
+        <style>
+            /* Resetting default margin and padding */
+            body, h1, h2, h3, p, ul, li {
+                margin: 0;
+                padding: 0;
+            }
+            /* Setting light peach as background color */
+            body {
+                background-color: #ffeaca;
+                font-family: Arial, sans-serif;
+            }
+            /* Styling form container */
+            .form-container {
+                margin: 50px auto; /* Center aligning */
+                width: 70%; /* Setting width */
+                background-color: rgb(255, 251, 229);
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            /* Styling form inputs */
+            label {
+                display: block;
+                margin-bottom: 10px;
+                font-weight: bold; /* Highlighting question statements */
+            }
+            input[type="text"], input[type="number"] {
+                width: calc(100% - 22px); /* Adjusting width */
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            input[type="checkbox"], input[type="radio"] {
+                display: none; /* Hiding checkboxes and radio buttons */
+            }
+            /* Styling custom checkboxes */
+            input[type="checkbox"] + label,
+            input[type="radio"] + label {
+                display: inline-block;
+                cursor: pointer;
+                padding-left: 25px;
+                position: relative;
+                margin-right: 20px;
+            }
+            input[type="checkbox"] + label::before,
+            input[type="radio"] + label::before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border: 1px solid #343a40; /* Dark blue color */
+                border-radius: 3px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            input[type="checkbox"]:checked + label::before,
+            input[type="radio"]:checked + label::before {
+                background-color: #343a40; /* Dark blue color */
+            }
+            /* Styling submit button */
+            input[type="submit"] {
+                background-color: #343a40;
+                color: rgb(255, 226, 180);
+                padding: 10px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                display: block;
+                width: 100%;
+                margin-top: 20px;
+            }
+            input[type="submit"]:hover {
+                background-color: #1e2124;
+            }
+        </style>
+        </head>
+        <body>
+            <!-- Form to capture health information -->
+            <div class="form-container">
+                <form>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <div class="separator"></div>
+        
+                    <label for="height">Height (in meters):</label>
+                    <input type="number" id="height" name="height" required><br>
+                    <div class="separator"></div>
+        
+                    <label for="weight">Weight:</label>
+                    <input type="number" id="weight" name="weight" required><br>
+                    <div class="separator"></div>
+        
+                    <label style="color: #343a40;">Vaccinations:</label><br>
+                    <input type="checkbox" id="hepatitisA" name="vaccinations" value="Hepatitis A">
+                    <label for="hepatitisA">Hepatitis A</label>
+                    <input type="checkbox" id="hepatitisB" name="vaccinations" value="Hepatitis B">
+                    <label for="hepatitisB">Hepatitis B</label>
+                    <input type="checkbox" id="polio" name="vaccinations" value="Polio">
+                    <label for="polio">Polio</label>
+                    <input type="checkbox" id="measles" name="vaccinations" value="Measles">
+                    <label for="measles">Measles</label>
+                    <input type="checkbox" id="rabies" name="vaccinations" value="Rabies">
+                    <label for="rabies">Rabies</label>
+                    <input type="checkbox" id="chickenpox" name="vaccinations" value="Chickenpox">
+                    <label for="chickenpox">Chickenpox</label><br>
+                    <div class="separator"></div>
+        
+                    <label style="color: #343a40;">Allergies:</label><br>
+                    <input type="checkbox" id="penicillin" name="allergies" value="Penicillin">
+                    <label for="penicillin">Penicillin Allergy</label>
+                    <input type="checkbox" id="aspirin" name="allergies" value="Aspirin">
+                    <label for="aspirin">Aspirin Allergy</label>
+                    <input type="checkbox" id="legume" name="allergies" value="Legume">
+                    <label for="legume">Legume Allergy</label>
+                    <input type="checkbox" id="eggplant" name="allergies" value="Eggplant">
+                    <label for="eggplant">Eggplant Allergy</label>
+                    <input type="checkbox" id="milk" name="allergies" value="Milk">
+                    <label for="milk">Milk Allergy</label>
+                    <input type="checkbox" id="egg" name="allergies" value="Egg">
+                    <label for="egg">Egg Allergy</label><br>
+                    <div class="separator"></div>
+        
+                    <label style="color: #343a40;">Family History:</label><br>
+                    <input type="checkbox" id="diabetes" name="familyHistory" value="Diabetes">
+                    <label for="diabetes">Diabetes</label>
+                    <input type="checkbox" id="highBloodPressure" name="familyHistory" value="High Blood Pressure">
+                    <label for="highBloodPressure">High Blood Pressure</label>
+                    <input type="checkbox" id="heartAbnormalities" name="familyHistory" value="Heart Abnormalities">
+                    <label for="heartAbnormalities">Heart Abnormalities</label><br>
+                    <input type="checkbox" id="geneticdisorder" name="familyHistory" value="Genetic Disorde">
+                    <label for="heartAbnormalities">Genetic Disorder</label><br>
+        
+                    <label id="pregnancyLabel" style="display: none; color: #343a40;">Pregnancy:</label>
+                    <input type="radio" id="pregnancyYes" name="pregnancy" value="Yes" style="display: none;">
+                    <label for="pregnancyYes" style="display: none;">Yes</label>
+                    <input type="radio" id="pregnancyNo" name="pregnancy" value="No" style="display: none;">
+                    <label for="pregnancyNo" style="display: none;">No</label>
+        
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Akashic Records. All rights reserved.</p>
+        <p>Contact us: contact@akashicrecords.com</p>
+        <p>Follow us on <a href="#">Twitter</a> | <a href="#">Facebook</a> | <a href="#">Instagram</a></p>
+    </footer>
+</body>
+</html>
